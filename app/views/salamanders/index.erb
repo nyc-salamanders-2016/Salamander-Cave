@@ -1,1 +1,7 @@
-Hello!!
+<h1>Salamander Cave! (With) Rocks</h1>
+
+<ul>
+<% @salamanders.each do |salamander| %>
+	<li><a href="/"><%= salamander.name %></a></li>
+<% end %>
+</ul>
