@@ -20,3 +20,8 @@ post '/salamanders' do
     erb :'salamanders/new'
   end
 end
+
+get '/salamanders/:id' do
+  @salamander = Salamander.find(params[:id])
+  erb :'salamanders/show'
+end
