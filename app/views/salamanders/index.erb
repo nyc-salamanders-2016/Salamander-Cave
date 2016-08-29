@@ -3,6 +3,6 @@
 <h2>Roll Call</h2>
 <ul>
 <% @salamanders.each do |salamander| %>
-	<li><a href="/"><%= salamander.name %></a></li>
+	<li><a href="/salamanders/<%= salamander.id%>"><%= salamander.name %></a></li>
 <% end %>
 </ul>
