@@ -18,9 +18,12 @@ $(document).ready(function() {
 		console.log(this);
 		console.log(event.target);
 	})
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+// This is an example where this and event.target are different
+	$('li').on("click",function(event){
+		event.preventDefault();
+		console.log(this);
+		console.log(event.target);
+	})
+
 });
