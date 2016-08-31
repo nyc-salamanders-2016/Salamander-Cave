@@ -9,7 +9,12 @@ get '/salamanders' do
 end
 
 get '/salamanders/new' do
-  erb :'salamanders/new'
+  # p "I'm in the route!"
+  if request.xhr?
+    erb :'salamanders/new', layout: false
+  else
+    erb :'salamanders/new'
+  end
 end
 
 post '/salamanders' do
